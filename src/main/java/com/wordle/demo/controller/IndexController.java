@@ -23,23 +23,23 @@ public class IndexController {
 	}
 
 	
-	@GetMapping("/")
-	public ModelAndView goToIndexPage() {
-		ModelAndView modelAndView = new ModelAndView("index");
-		Guess guess = new Guess(guessService.getPalabraCorrecta());
-		modelAndView.addObject("guess", guess);
-		return modelAndView;
-	}	
+		@GetMapping("/")
+		public ModelAndView goToIndexPage() {
+			ModelAndView modelAndView = new ModelAndView("index");
+			Guess guess = new Guess(guessService.getPalabraCorrecta());
+			modelAndView.addObject("guess", guess);
+			return modelAndView;
+		}	
+		
+		@PostMapping("/guessPalabra")
+		public ModelAndView intentoAcierto(@ModelAttribute("guess") Guess guess) {
+			System.out.println(guess.palabra);
 	
-	@PostMapping("/guessPalabra")
-	public ModelAndView intentoAcierto(@ModelAttribute("guess") Guess guess) {
-		System.out.println(guess.palabra);
-
-		ModelAndView modelAndView = new ModelAndView("index");
-		String resultado = guessService.comprobar(guess.palabra);
-		modelAndView.addObject("resultado", resultado);
-		return modelAndView;
-	}
+			ModelAndView modelAndView = new ModelAndView("index");
+			String resultado = guessService.comprobar(guess.palabra);
+			modelAndView.addObject("resultado", resultado);
+			return modelAndView;
+		}
 	
 
 
