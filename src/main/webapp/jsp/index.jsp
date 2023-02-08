@@ -10,6 +10,8 @@
 <body>
 <p>YO!</p>
 <h1>Adivina la palabra! puedes cambiar la dificultad con los perfiles "Easy", "Medium" y "Hard"</h1>
+<p> aparece una _ en las letras que has fallado y aparecen las letras como deben en las que has acertado. no logré hacer que salga de colores.</p>
+<p>tip para test: la palabra que aparece en la insercion es la palabra correcta.
 <form:form action="guessPalabra" method="post" modelAttribute="guess">
 	<form:input path="palabra" type="text" name="palabra"/>	
 	<input type="submit"/>
