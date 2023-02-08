@@ -10,6 +10,6 @@ public class GuessServiceMedium extends AbstractGuessService {
 	public GuessServiceMedium() {
 		palabraCorrecta = "miauu";
 		longitud=5;
-		intentos=10;
+		intentos=9;
 	}
 }

@@ -9,6 +9,17 @@
 <meta charset="ISO-8859-1">
 <body>
 <p>aver!</p>
-<c:out value="${resultado}"></c:out>
+<table>
+<tr>
+	<th>Intento</th>
+	<th>Respuesta</th>
+</tr>
+<c:forEach var="i" items="${lista}" varStatus="loop">
+<tr>
+<td><c:out value="${loop.index}"/></td>
+<td><c:out value="${i}"/></td>
+</tr>
+</c:forEach>
+</table>
 </body>
 </html>

@@ -9,6 +9,7 @@
 <meta charset="ISO-8859-1">
 <body>
 <p>YO!</p>
+<h1>Adivina la palabra! puedes cambiar la dificultad con los perfiles "Easy", "Medium" y "Hard"</h1>
 <form:form action="guessPalabra" method="post" modelAttribute="guess">
 	<form:input path="palabra" type="text" name="palabra"/>	
 	<input type="submit"/>

@@ -10,7 +10,7 @@ public class GuessServiceEasy extends AbstractGuessService {
 	public GuessServiceEasy() {
 		palabraCorrecta = "miu";
 		longitud=3;
-		intentos=20;
+		intentos=19;
 	}
 
 }

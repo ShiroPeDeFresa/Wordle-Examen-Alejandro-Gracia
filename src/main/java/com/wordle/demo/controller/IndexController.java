@@ -36,9 +36,26 @@ public class IndexController {
 			System.out.println(guess.palabra);
 	
 			ModelAndView modelAndView = new ModelAndView("index");
-			String resultado = guessService.comprobar(guess.palabra);
-			modelAndView.addObject("resultado", resultado);
-			return modelAndView;
+			ModelAndView modelAndViewEnd = new ModelAndView("resultado");
+			String intentos = guessService.limiteIntentos();
+			if(intentos.equals("prosigue")) {
+				String resultado = guessService.comprobar(guess.palabra);
+				if (guess.palabra.equals(guessService.getPalabraCorrecta())) {
+					modelAndViewEnd.addObject("lista", guessService.getPalabrasUsadas());
+					return modelAndViewEnd;
+				}
+				else {
+					modelAndView.addObject("resultado", resultado);
+					return modelAndView;
+
+				}
+			}
+			else {
+				modelAndViewEnd.addObject("lista", guessService.getPalabrasUsadas());
+				return modelAndViewEnd;
+			}
+			
+			
 		}
 	
 

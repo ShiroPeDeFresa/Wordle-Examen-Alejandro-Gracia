@@ -10,7 +10,7 @@ public class GuessServiceHard extends AbstractGuessService {
 	public GuessServiceHard() {
 		palabraCorrecta = "miaumiau";
 		longitud=8;
-		intentos=6;
+		intentos=5;
 	}
 
 }
