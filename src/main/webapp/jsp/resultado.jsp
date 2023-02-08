@@ -8,12 +8,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <body>
-<p>YO!</p>
-<form:form action="guessPalabra" method="post" modelAttribute="guess">
-	<form:input path="palabra" type="text" name="palabra"/>	
-	<input type="submit"/>
-</form:form>
-
+<p>aver!</p>
 <c:out value="${resultado}"></c:out>
 </body>
 </html>
